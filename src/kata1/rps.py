@@ -7,7 +7,6 @@ options = ["Piedra", "Papel", "Tijeras"]
 #'Ganaste!'
 #'Perdiste!'
 ai = options[randint(0,2)]
-player = input("Piedra, Papel o Tijera? ")
 
 def quienGana(player, ai):
 

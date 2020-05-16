@@ -9,5 +9,5 @@ def RandomPasswordGenerator(passLen=10):
     
     #
     #
-
-    return ""
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(caracteres) for i in range(passLen))

@@ -10,26 +10,29 @@ ai = options[randint(0,2)]
 
 def quienGana(player, ai):
 
-    if player == "Piedra":
-        if ai == "Piedra":
+    player_lower = player.lower()
+    ai_lower = ai.lower()
+
+    if player_lower == "piedra":
+        if ai_lower == "piedra":
             return "Empate!"
-        elif ai == "Papel":
+        elif ai_lower == "papel":
             return "Perdiste!"
         else:
             return "Ganaste!"
 
-    elif player == "Papel":
-        if ai == "Piedra":
+    elif player_lower == "papel":
+        if ai_lower == "piedra":
             return "Ganaste!"
-        elif ai == "Papel":
+        elif ai_lower == "papel":
             return "Empate!"
         else:
             return "Perdiste!"
     
     else:
-        if ai == "Piedra":
+        if ai_lower == "piedra":
             return "Perdiste!"
-        elif ai == "Papel":
+        elif ai_lower == "papel":
             return "Ganaste!"
         else:
             return "Empate!"

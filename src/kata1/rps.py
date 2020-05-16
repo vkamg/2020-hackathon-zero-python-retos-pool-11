@@ -6,8 +6,35 @@ options = ["Piedra", "Papel", "Tijeras"]
 #'Empate!'
 #'Ganaste!'
 #'Perdiste!'
+ai = options[randint(0,2)]
+player = input("Piedra, Papel o Tijera? ")
+
 def quienGana(player, ai):
-    return ""
+
+    if player == "Piedra":
+        if ai == "Piedra":
+            return "Empate!"
+        elif ai == "Papel":
+            return "Perdiste!"
+        else:
+            return "Ganaste!"
+
+    elif player == "Papel":
+        if ai == "Piedra":
+            return "Ganaste!"
+        elif ai == "Papel":
+            return "Empate!"
+        else:
+            return "Perdiste!"
+    
+    else:
+        if ai == "Piedra":
+            return "Perdiste!"
+        elif ai == "Papel":
+            return "Ganaste!"
+        else:
+            return "Empate!"
+
 
 # Entry Point
 def Game():
